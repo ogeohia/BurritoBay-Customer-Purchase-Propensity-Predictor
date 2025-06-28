@@ -128,7 +128,7 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 ├── reports/                
 │   ├── eda_summary.pdf     
 │   ├── model_evaluation_summary.pdf 
-│   └── (optional: presentation slides)
+│   └── presentation slides
 ├── .gitignore             
 └── requirements.txt
 ```       

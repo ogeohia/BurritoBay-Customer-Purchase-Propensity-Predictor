@@ -114,7 +114,7 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 ├── notebook/               
 │   └── purchase_propensity_prediction.ipynb 
 ├── data/                   
-│   └── online_shoppers_intention.csv # (Optional: Can include if allowed, otherwise describe how to obtain)
+│   └── online_shoppers_intention.csv
 ├── src/                   
 │   ├── data_preprocessing.py 
 │   ├── modeling.py        
@@ -124,8 +124,7 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 │           ├── app.py
 │           └── requirements.txt
 ├── models/                
-│   ├── purchase_intent_pipeline.pkl 
-│   └── (optional: other saved models/transformers from experiments)
+│   └── purchase_intent_pipeline.pkl 
 ├── reports/                
 │   ├── eda_summary.pdf     
 │   ├── model_evaluation_summary.pdf 

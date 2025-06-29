@@ -1,11 +1,18 @@
 # Project dependencies 
 
+# Data Handling and Analysis
 pandas>=1.0.0
 numpy>=1.18.0
-matplotlib>=3.0.0
-seaborn>=0.10.0
+matplotlib>=3.0.0 # Used in notebook for EDA visualizations
+seaborn>=0.10.0   # Used in notebook for EDA visualizations
+
+# Machine Learning - Core Libraries
 scikit-learn>=1.0.0
-lightgbm>=3.0.0
-imbalanced-learn>=0.8.0
+lightgbm>=3.0.0    # If you decide to use LightGBM as your final model
+imbalanced-learn>=0.8.0 # For RandomOverSampler
+
+# Model Saving/Loading
 joblib>=1.0.0
+
+# Web Framework for Deployment API
 flask>=2.0.0

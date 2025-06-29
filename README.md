@@ -110,11 +110,16 @@ This pipeline is ready to be integrated into ShopBoys' operational systems:
 
 ```
 ShopBoys-Customer-Purchase-Propensity-Predictor/
-├── README.md               
-├── notebook/               
-│   └── purchase_propensity_prediction.ipynb 
 ├── data/                   
 │   └── online_shoppers_intention.csv
+├── models/                
+│   └── purchase_intent_pipeline.pkl 
+├── notebook/               
+│   └── purchase_propensity_prediction.ipynb 
+├── reports/                
+│   ├── eda_summary.pdf     
+│   ├── model_evaluation_summary.pdf 
+│   └── presentation slides
 ├── src/                   
 │   ├── data_preprocessing.py 
 │   ├── modeling.py        
@@ -123,13 +128,9 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 │       └── api/           
 │           ├── app.py
 │           └── requirements.txt
-├── models/                
-│   └── purchase_intent_pipeline.pkl 
-├── reports/                
-│   ├── eda_summary.pdf     
-│   ├── model_evaluation_summary.pdf 
-│   └── presentation slides
-├── .gitignore             
+├── .gitignore   
+├── LICENSE  
+├── README.md           
 └── requirements.txt
 ```       
 ## How to Reproduce

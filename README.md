@@ -143,7 +143,7 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 ## Requirements
 
 *   Python 3.7+
-*   See `requirements.txt` for specific package versions (pandas, numpy, scikit-learn, matplotlib, seaborn, lightgbm, imbalanced-learn).
+*   See `requirements.txt` for specific package versions.
 
 ## Future Work
 

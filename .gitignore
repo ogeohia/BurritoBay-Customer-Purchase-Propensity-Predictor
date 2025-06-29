@@ -1,1 +1,23 @@
-
+.DS_Store     
+Thumbs.db      
+*.pyc
+venv/
+.venv/
+*~
+*.swp
+.idea/          
+.vscode/        
+*.iml           
+models/fitted_kmeans_model.pkl
+models/kmeans_input_preprocessor.pkl
+models/fitted_label_encoders.pkl
+models/lightgbm_model.pkl
+models/random_forest_model.pkl
+models/selected_features.pkl
+models/purchase_intent_pipeline.pkl # If you also save a combined pipeline
+notebook/.ipynb_checkpoints/
+.env
+dist/
+build/
+*.egg-info/
+# *.log

@@ -1,34 +1,34 @@
-# ShopBoys Customer Purchase Propensity Predictor
+# BurritoBay Customer Purchase Propensity Predictor
 
 ## Executive Summary
 
-This project developed and evaluated machine learning models to predict online shopper purchase intent for ShopBoys. Facing challenges with inefficient marketing spend and missed sales opportunities, the Marketing and Product teams needed a way to identify users most likely to convert.
+This project developed and evaluated machine learning models to predict online shopper purchase intent for BurritoBay an online mexica food restaurant. Facing challenges with inefficient marketing spend and missed sales opportunities, the Marketing and Product teams needed a way to identify users most likely to convert.
 
 Our analysis, using historical session data, uncovered key behavioral drivers of purchase, such as high page engagement, significant page value, and low bounce/exit rates. By clustering user sessions, we identified distinct behavioral segments with varying conversion rates, providing actionable insights for targeted strategies.
 
 Focusing on the business objective to **maximize the identification of potential purchasers (prioritizing Recall)**, we trained and tuned LightGBM and Random Forest models. The **Tuned LightGBM model** demonstrated the best performance in capturing potential buyers (Recall: 0.63) while maintaining strong overall discrimination (ROC AUC: 0.913).
 
-The final model is delivered as a deployable pipeline, ready to integrate into SB's systems for applications like:
+The final model is delivered as a deployable pipeline, ready to integrate into BB's systems for applications like:
 
 *   Identifying high-intent users for targeted promotions.
 *   Enabling real-time website personalization.
 *   Triggering proactive customer support during high-value sessions.
 
-This project provides ShopBoys with a data-driven tool to enhance sales capture and improve the efficiency of customer engagement efforts.
+This project provides BurritoBay with a data-driven tool to enhance sales capture and improve the efficiency of customer engagement efforts.
 
 ## Business Problem
 
-ShopBoys (SB), like many e-commerce businesses, invests heavily in driving traffic to its website. However, converting that traffic into sales is a significant challenge. The Marketing team, was finding that broad marketing campaigns resulted in low conversion rates and wasted budget. Simultaneously, the Product team was seeking ways to dynamically enhance the user experience for those showing clear signs of purchase intent. Without a clear signal of *when* a user session was hot, opportunities were being missed.
+BurritoBay (BB), like many e-commerce businesses, invests heavily in driving traffic to its website. However, converting that traffic into sales is a significant challenge. The Marketing team, was finding that broad marketing campaigns resulted in low conversion rates and wasted budget. Simultaneously, the Product team was seeking ways to dynamically enhance the user experience for those showing clear signs of purchase intent. Without a clear signal of *when* a user session was hot, opportunities were being missed.
 
 The core problem was the inability to move beyond reacting to purchases *after* they happened, towards **proactively identifying and influencing sessions *likely* to result in a purchase.** This project was initiated to provide that crucial predictive capability.
 
 ## Project Goal & Research Question
 
-The overarching goal was to build and validate a machine learning model capable of accurately predicting purchase intent for individual user sessions on the SB website.
+The overarching goal was to build and validate a machine learning model capable of accurately predicting purchase intent for individual user sessions on the BB website.
 
 The guiding question was:
 
-> How can we leverage patterns in online shopper behavior and technical session attributes to predict purchase intention, thereby enabling SB to maximize sales opportunities?
+> How can we leverage patterns in online shopper behavior and technical session attributes to predict purchase intention, thereby enabling BB to maximize sales opportunities?
 
 ## Dataset
 
@@ -51,7 +51,7 @@ The project followed a structured data science workflow to derive insights and b
 
 ## Key Insights from Analysis
 
-The analysis provided critical insights into what drives purchases on SB's simulated platform:
+The analysis provided critical insights into what drives purchases on BB's simulated platform:
 
 *   **Engagement is Paramount:** Sessions with a higher number of page views and longer durations across Administrative, Informational, and Product-Related pages are significantly more likely to convert.
   
@@ -77,7 +77,7 @@ These insights not only support the model's predictions but also provide actiona
 
 ## Model Selection & Performance (Aligning with Business Priority)
 
-Given SB's primary objective to **maximize the identification of potential purchasers (high Recall)**, we evaluated our tuned models with this goal in mind. Both LightGBM and Random Forest performed well, but showed different trade-offs between correctly identifying positives (Recall) and avoiding false alarms (Precision).
+Given BB's primary objective to **maximize the identification of potential purchasers (high Recall)**, we evaluated our tuned models with this goal in mind. Both LightGBM and Random Forest performed well, but showed different trade-offs between correctly identifying positives (Recall) and avoiding false alarms (Precision).
 
 After comparing the tuned models on the unseen test set, the **Tuned LightGBM** model was selected because it achieved a higher **Recall (0.63)** for the 'Purchase' class compared to the Tuned Random Forest (0.55). This means it is more effective at capturing a larger percentage of the sessions that actually result in a purchase, aligning directly with the business need to identify *more* potential buyers.
 
@@ -101,7 +101,7 @@ The ROC Curve below visually demonstrates the trade-off between True Positive Ra
 
 The final **Tuned LightGBM Pipeline** has been saved as `models/purchase_intent_pipeline.pkl`. This single artifact encapsulates all necessary preprocessing steps and the trained model.
 
-This pipeline is ready to be integrated into ShopBoys' operational systems:
+This pipeline is ready to be integrated into BurritoBay' operational systems:
 
 *   **Batch Scoring:** The pipeline can be used in scheduled jobs to score daily session data, generating lists of high-potential leads for email marketing automation or CRM updates (see example script in `src/deployment/predict.py`).
 *   **Real-time API:** The pipeline can be loaded into a web service (e.g., a Flask or FastAPI app) to provide low-latency purchase intent predictions for individual sessions as they happen, enabling dynamic website content, personalized recommendations, or proactive chat invitations (see example structure in `src/deployment/api/`).
@@ -109,7 +109,7 @@ This pipeline is ready to be integrated into ShopBoys' operational systems:
 ## Repository Structure
 
 ```
-ShopBoys-Customer-Purchase-Propensity-Predictor/
+BurritoBay-Customer-Purchase-Propensity-Predictor/
 ├── data/                   
 │   └── online_shoppers_intention.csv
 ├── models/                
@@ -135,8 +135,8 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 ```       
 ## How to Reproduce
 
-1.  Clone this repository: `git clone https://github.com/ogeohia/ShopBoys-Customer-Purchase-Propensity-Predictor.git` 
-2.  Navigate to the repository directory: `cd ShopBoys-Customer-Purchase-Propensity-Predictor`
+1.  Clone this repository: `git clone https://github.com/ogeohia/BurritoBay-Customer-Purchase-Propensity-Predictor.git` 
+2.  Navigate to the repository directory: `cd BurritoBay-Customer-Purchase-Propensity-Predictor`
 3.  Install the required Python packages: `pip install -r requirements.txt`
 4.  Place the `online_shoppers_intention.csv` dataset file in the `data/` directory, or modify the notebook to load it from your preferred location.
 5.  Open and run the `notebook/purchase_intent_analysis.ipynb` notebook in a Jupyter environment (like Google Colab, JupyterLab, or VS Code with the Python extension) to execute the full analysis workflow.
@@ -148,7 +148,7 @@ ShopBoys-Customer-Purchase-Propensity-Predictor/
 
 ## Future Work
 
-To further enhance this project and maximize its value for SB:
+To further enhance this project and maximize its value for BB:
 
 *   **A/B Testing:** Implement A/B tests to quantitatively measure the uplift in conversion rates resulting from using the model's predictions in marketing campaigns or website personalization.
 *   **Model Monitoring:** Establish automated monitoring of the model's performance in production and set up alerts for data drift or prediction quality degradation.

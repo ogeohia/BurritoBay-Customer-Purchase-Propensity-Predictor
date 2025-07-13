@@ -1,8 +1,8 @@
-# BurritoBay Customer Purchase Propensity Predictor
+# BurritoBay Buyer Propensity Predictor
 
 ## Executive Summary
 
-This project developed and evaluated machine learning models to predict online shopper purchase intent for BurritoBay an online Mexican food marketplace. Facing challenges with inefficient marketing spend and missed sales opportunities, the Marketing and Product teams needed a way to identify users most likely to convert.
+This project developed and evaluated machine learning models to predict buyer intent for BurritoBay an online Mexican food marketplace. Facing challenges with inefficient marketing spend and missed sales opportunities, the Marketing and Product teams needed a way to identify users most likely to convert.
 
 Our analysis, using historical session data, uncovered key behavioral drivers of purchase, such as high page engagement, significant page value, and low bounce/exit rates. By clustering user sessions, we identified distinct behavioral segments with varying conversion rates, providing actionable insights for targeted strategies.
 
@@ -28,7 +28,7 @@ The overarching goal was to build and validate a machine learning model capable 
 
 The guiding question was:
 
-> How can we leverage patterns in online shopper behavior and technical session attributes to predict purchase intention, thereby enabling BB to maximize sales opportunities?
+> How can we leverage patterns in buyer behavior and technical session attributes to predict purchase intention, thereby enabling BB to maximize sales opportunities?
 
 ## Dataset
 

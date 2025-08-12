@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This project developed and evaluated machine learning models to predict cusotomer purchase intent for BurritoBay an online Mexican food business. Facing challenges with inefficient marketing spend and missed sales opportunities, the Marketing and Product teams needed a way to identify users most likely to convert.
+This project developed and evaluated machine learning models to predict cusotomer purchase intent for BurritoBay -a hypothetical online Mexican food business. Facing challenges with inefficient marketing spend and missed sales opportunities, the Marketing and Product teams needed a way to identify users most likely to convert.
 
 Our analysis, using historical session data, uncovered key behavioral drivers of purchase, such as high page engagement, significant page value, and low bounce/exit rates. By clustering user sessions, we identified distinct behavioral segments with varying conversion rates, providing actionable insights for targeted strategies.
 

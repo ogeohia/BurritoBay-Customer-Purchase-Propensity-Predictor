@@ -133,14 +133,6 @@ BurritoBay-Customer-Purchase-Propensity-Predictor/
 ├── README.md           
 └── requirements.txt
 ```       
-## How to Reproduce
-
-1.  Clone this repository: `git clone https://github.com/ogeohia/BurritoBay-Customer-Purchase-Propensity-Predictor.git` 
-2.  Navigate to the repository directory: `cd BurritoBay-Customer-Purchase-Propensity-Predictor`
-3.  Install the required Python packages: `pip install -r requirements.txt`
-4.  Place the `online_shoppers_intention.csv` dataset file in the `data/` directory, or modify the notebook to load it from your preferred location.
-5.  Open and run the `notebook/purchase_intent_analysis.ipynb` notebook in a Jupyter environment (like Google Colab, JupyterLab, or VS Code with the Python extension) to execute the full analysis workflow.
-
 ## Requirements
 
 *   Python 3.7+

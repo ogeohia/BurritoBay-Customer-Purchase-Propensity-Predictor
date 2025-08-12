@@ -54,28 +54,17 @@ The project followed a structured data science workflow to derive insights and b
 The analysis provided critical insights into what drives purchases on BB's simulated platform:
 
 *   **Engagement is Paramount:** Sessions with a higher number of page views and longer durations across Administrative, Informational, and Product-Related pages are significantly more likely to convert.
-  
-    ![image](https://github.com/user-attachments/assets/677f87d9-177a-4627-b198-759ff123ffc7)
-
-
 *   **PageValue is a Strong Signal:** `PageValues` shows the strongest direct correlation with `Revenue`. Sessions with higher accumulated page value are more likely to convert.
   
     ![image](https://github.com/user-attachments/assets/fd526ce9-642d-4874-a036-461dd19f7fd4)
    
 *   **Reducing Friction is Key:** Low `BounceRates` and `ExitRates` are highly associated with purchases, indicating engaged users who are navigating smoothly rather than leaving quickly.
-    *   *(See: Above Box Plots and Correlation Heatmap - negative correlations)*
+    *   *(See: Above Correlation Heatmap - negative correlations)*
 *   **Distinct User Segments Exist:** K-Means clustering revealed behavioral groups. Cluster 1, characterized by very high engagement and low exit rates (visible in the **box plots by Cluster**), had the highest conversion rate (shown in the **Revenue Proportion by Cluster bar plot**).
-  
-    ![image](https://github.com/user-attachments/assets/92ef501c-a339-43cd-ab86-9c8694a7875d)
-    ![image](https://github.com/user-attachments/assets/b7f17efb-09a4-44c7-b5be-1c232b4251d7)
-
 *   **Timing Matters:** Certain months (like Ocotber, November) and weekdays show higher proportions of purchasing sessions.
-
-    ![image](https://github.com/user-attachments/assets/1fed274d-549f-44bc-91cc-40b54a2571ca)
-
 These insights not only support the model's predictions but also provide actionable guidance for the Product team (e.g., improving navigation, identifying high-value page flows) and the Marketing team (e.g., tailoring campaigns based on engagement levels or cluster membership).
 
-## Model Selection & Performance (Aligning with Business Priority)
+## Model Selection & Performance
 
 Given BB's primary objective to **maximize the identification of potential purchasers (high Recall)**, we evaluated our tuned models with this goal in mind. Both LightGBM and Random Forest performed well, but showed different trade-offs between correctly identifying positives (Recall) and avoiding false alarms (Precision).
 
